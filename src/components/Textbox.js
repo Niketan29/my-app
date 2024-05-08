@@ -64,7 +64,7 @@ export default function Textbox(props) {
 
         <div className="container2 my-3" style={{color: props.mode ==='light'?'black':'white'}}>
             <h3>Your Text Summery</h3>
-            <span class="border border-dark px-2">{text.split(" ").filter((element)=>{return element.length!==0}).length} words  and  {text.length} characters</span>
+            <span class="border border-dark px-2">{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words  and  {text.length} characters</span>
             <p className='my-3 px-2'>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}  Min  Read</p>
             <h4>Preview</h4>
             <p>{text}</p>
